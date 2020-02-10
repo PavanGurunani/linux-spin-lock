@@ -5,6 +5,11 @@
    it becomes an alternative name for an existing variable.
    A variable can be declared as reference by putting ‘&’ in the declaration.
 
+   References are less powerful than pointers
+   1) Once a reference is created, it cannot be later made to reference another object; it cannot be reseated. This is often done with pointers.
+   2) References cannot be NULL. Pointers are often made NULL to indicate that they are not pointing to any valid thing.
+   3) A reference must be initialized when declared. There is no such restriction with pointers
+
 */
 #include <iostream> 
   
@@ -20,7 +25,6 @@ int main()
     //int& ref = y;   //Not allowed :  Once a reference is created,
                       //it cannot be later made to reference another object;
                       //it cannot be reseated. This is often done with pointers.
-
     int& ref1 = x;
 
     cout << "value of x="<<x << " and ref=" << ref << endl;
